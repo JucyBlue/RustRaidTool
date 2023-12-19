@@ -7,7 +7,7 @@ count = 0
 lines = []
 
 #No Bitches
-#pyinstaller --onefile "C:\Users\Painf\OneDrive\Desktop\VS Code\CodeRaiding\CodeRaidingTool.py"
+#pyinstaller --onefile "C:\Users\Painf\OneDrive\Desktop\VS Code\CodeRaiding\RustRaidTool\main.py"
 def on_key_event(e):
     global count
     int(count)

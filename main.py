@@ -11,7 +11,7 @@ lines = []
 def on_key_event(e):
     global count
     int(count)
-    if e.name == ']' and e.event_type == 'down':
+    if (e.name == 'enter') and e.event_type == 'down':
         if count < len(lines):
             line = lines[count].strip() 
             print("[" + "{:04}".format(count+1) +"]ENTERING:" + lines[count],end='')
@@ -19,6 +19,22 @@ def on_key_event(e):
             count += 1
         else:
             print("All codes tested :(")
+    
+    if e.name == '-' and e.event_type == 'down':
+        if count > 0:
+            line = lines[count].strip() 
+            print("|BACK| Next Code:" + lines[count-1],end='')
+            pyautogui.typewrite(line, interval=0.1)
+            count -= 1
+    
+    if (e.name == '+' or e.name == '=') and e.event_type == 'down':
+        if count > 0:
+            line = lines[count].strip() 
+            print("|JUMP| Skipped count[" + "{:04}".format(count+1) + "] Next Code:" + lines[count+1],end='')
+            pyautogui.typewrite(line, interval=0.1)
+            count += 1
+    
+
 
 def main():
     global count

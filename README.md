@@ -1,6 +1,6 @@
 Automates the process of typing in codes with a list of 10,000 4 digit combinations ordered by frequency
 
-**Commands** <br />
+_**Commands**_ <br />
 [enter] ~ Enters code <br />
 [+] ~ Jump forward code <br />
 [-] ~ Go back a code <br /> <br /> <br />
